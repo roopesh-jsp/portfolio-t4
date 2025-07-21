@@ -1,10 +1,14 @@
 import React from "react";
 import Hero from "../components/Hero";
+import FeatureSection from "../components/Features";
+import ServicesSection from "../components/Services";
 
 function Home() {
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
+      <FeatureSection />
+      <ServicesSection />
     </div>
   );
 }

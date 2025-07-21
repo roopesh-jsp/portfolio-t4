@@ -5,11 +5,13 @@ import Footer from "../components/Footer";
 
 function Root() {
   return (
-    <>
+    <div className="bg-slate-900 text-gray-200">
       <Navbar />
-      <Outlet />
-      <Footer />
-    </>
+      <div className="mt-[72px]">
+        <Outlet />
+        <Footer />
+      </div>
+    </div>
   );
 }
 
