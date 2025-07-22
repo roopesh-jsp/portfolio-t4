@@ -39,6 +39,7 @@ function FeatureSection() {
             whileHover={{
               scale: 1.03,
               boxShadow: "0px 0px 20px rgba(0, 255, 255, 0.15)",
+              transition: { duration: 0.25 }, // instant hover response
             }}
             className="bg-[#1a1a1a] p-6 rounded-xl shadow-md border border-white/10 cursor-default transition duration-300 hover:bg-[#1f1f1f]"
           >

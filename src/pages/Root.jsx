@@ -7,10 +7,10 @@ function Root() {
   return (
     <div className="bg-slate-900 text-gray-200">
       <Navbar />
-      <div className="mt-[72px]">
+      <div className="mt-[72px] min-h-dvh ">
         <Outlet />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

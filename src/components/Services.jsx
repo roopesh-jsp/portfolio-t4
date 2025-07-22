@@ -18,11 +18,14 @@ function ServicesSection() {
         {services.map((item, index) => (
           <motion.div
             key={index}
-            whileHover={{ scale: 1.03 }}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
+            whileHover={{
+              scale: 1.03,
+              transition: { duration: 0.3 }, // quick responsive hover
+            }}
             className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-6 shadow-[0_0_12px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(0,255,255,0.2)] transition-shadow duration-300"
           >
             <div>
