@@ -7,7 +7,7 @@ import TechStackSection from "../components/TechStackSection";
 function Home() {
   return (
     <div>
-      {/* <Hero /> */}
+     <Hero /> 
       <FeatureSection />
       <ServicesSection />
       <TechStackSection />
