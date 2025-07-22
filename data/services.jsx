@@ -55,5 +55,6 @@ export const hotServices = [
     badgeColor: "bg-cyan-900/20 text-cyan-400",
     glowColor: "shadow-[0_0_30px_rgba(0,255,255,0.1)]",
   },
+
   // You can add more items here in future...
 ];
