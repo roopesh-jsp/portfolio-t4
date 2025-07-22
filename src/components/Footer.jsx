@@ -9,20 +9,20 @@ function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid md:grid-cols-3 gap-8 text-center md:text-left"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 text-center md:text-left"
         >
-          {/* Column 1: Branding */}
+          {/* Column 1: Branding (left-aligned) */}
           <div>
             <h3 className="text-xl font-bold text-white mb-2">T4 Solutions</h3>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm max-w-xs">
               Turning ideas into digital excellence.
             </p>
           </div>
 
-          {/* Column 2: Navigation (placeholder links) */}
-          <div>
+          {/* Column 2: Navigation (center-aligned) */}
+          <div className="flex flex-col items-center">
             <h4 className="text-lg font-semibold mb-3 text-white">Explore</h4>
-            <ul className="space-y-2 text-sm text-gray-400">
+            <ul className="space-y-2 text-sm text-gray-400 text-center">
               <li>
                 <a href="#" className="hover:text-cyan-400 transition">
                   Home
@@ -41,17 +41,18 @@ function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Placeholder for newsletter/social/etc */}
+          {/* Column 3: Stay Connected (left-aligned) */}
           <div>
             <h4 className="text-lg font-semibold mb-3 text-white">
               Stay Connected
             </h4>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 text-sm max-w-xs">
               Follow us or get in touch — details coming soon.
             </p>
           </div>
         </motion.div>
 
+        {/* Copyright */}
         <motion.div
           className="mt-10 border-t border-white/10 pt-6 text-center text-sm text-gray-500"
           initial={{ opacity: 0 }}

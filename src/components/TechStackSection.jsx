@@ -42,16 +42,6 @@ const techRows = [
     { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
     { name: "FastAPI", icon: <SiFastapi className="text-green-300" /> },
     { name: "LangChain", icon: <SiLangchain className="text-indigo-300" /> },
-    {
-      name: "LangGraph",
-      icon: (
-        <img
-          src="/icons/langgraph.svg"
-          alt="LangGraph"
-          className="w-6 h-6 grayscale"
-        />
-      ),
-    },
   ],
 ];
 

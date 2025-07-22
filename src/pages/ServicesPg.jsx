@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { services as tabs } from "../../data/services";
 import { useSearchParams } from "react-router-dom";
+import HotServices from "../components/HotServices";
 
 function ServicesPg() {
   const [activeTab, setActiveTab] = useState(0);
@@ -23,7 +24,7 @@ function ServicesPg() {
 
   return (
     <section className="bg-gradient-to-br from-[#0a0a0a] via-[#111] to-[#0a0a0a] text-white py-16 px-6 min-h-screen">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto mb-10">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
@@ -80,6 +81,7 @@ function ServicesPg() {
           </motion.div>
         </AnimatePresence>
       </div>
+      <HotServices />
     </section>
   );
 }

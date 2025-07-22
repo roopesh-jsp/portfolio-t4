@@ -42,3 +42,18 @@ export const services = [
       "Capture leads and drive conversions with strategic landing pages. With compelling visuals and CTAs, our pages help your marketing campaigns reach their peak potential.",
   },
 ];
+
+export const hotServices = [
+  {
+    id: 1,
+    label: "🔥 Hot Service",
+    title: "Personal Portfolio Websites for Students",
+    description:
+      "Launch your digital presence without breaking the bank. We craft stunning, responsive portfolios for students at minimal cost — fully customizable with real-time feedback integration.",
+    cta: "Get Yours Now",
+    href: "#contact", // or route or modal trigger
+    badgeColor: "bg-cyan-900/20 text-cyan-400",
+    glowColor: "shadow-[0_0_30px_rgba(0,255,255,0.1)]",
+  },
+  // You can add more items here in future...
+];
