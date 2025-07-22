@@ -6,7 +6,7 @@ import ServicesSection from "../components/Services";
 function Home() {
   return (
     <div>
-      {/* <Hero /> */}
+     <Hero /> 
       <FeatureSection />
       <ServicesSection />
     </div>
