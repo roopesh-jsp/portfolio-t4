@@ -1,0 +1,42 @@
+.iconContainerWrapper {
+  position: absolute;
+  inset: 0; /* Covers entire parent initially (top:0, right:0, bottom:0, left:0) */
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; /* Crucial: allows clicks to pass through to content below */
+  padding: 1rem; /* General padding around the icon display area */
+
+  /* No display: grid or flex here, icons will be placed randomly using JS */
+}
+
+.iconItem {
+  /* Common styles for all icons */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Always absolute positioning for random scatter across all screen sizes */
+  position: absolute;
+  /* This transform centers the icon element on its 'left' and 'top' calculated point */
+  transform: translate(-50%, -50%);
+}
+
+/* Responsive icon sizes */
+/* Default (mobile) icon size */
+.iconItem > svg {
+  font-size: 1.8rem; /* Equivalent to a size suitable for mobile, adjust as needed */
+}
+
+/* Tablet icon size */
+@media (min-width: 768px) {
+  .iconItem > svg {
+    font-size: 3rem; /* Larger for tablets */
+  }
+}
+
+/* Desktop icon size */
+@media (min-width: 1024px) {
+  .iconItem > svg {
+    font-size: 4rem; /* Even larger for desktops */
+  }
+}

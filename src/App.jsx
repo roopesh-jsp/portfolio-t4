@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import ServicesPg from "./pages/ServicesPg";
 
+
 const router = createBrowserRouter([
   {
     path: "/",
