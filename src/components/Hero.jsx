@@ -100,7 +100,9 @@ function Hero() {
 
         {/* 🚀 Call Button */}
         <motion.a
-          href="#book"
+          href="https://wa.me/918897502339?text=Hi!%20I%E2%80%99d%20like%20to%20book%20a%20free%20call%20about%20building%20a%20website%20for%20my%20business."
+          target="_blank"
+          rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-br from-purple-600 to-purple-800 text-white font-semibold rounded-full shadow-md transition-all duration-300"
