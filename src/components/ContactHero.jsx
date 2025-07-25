@@ -2,7 +2,7 @@ import { FaInstagram, FaPhoneAlt } from "react-icons/fa";
 
 export default function ContactHero() {
   return (
-    <section className="w-full bg-gradient-to-br from-[#0d0d0d] via-[#111] to-[#0d0d0d] text-white px-6 py-20 flex flex-col items-center">
+    <section className="w-full bg-[#0d0d0d] text-white px-6 py-20 flex flex-col items-center">
       <div className="max-w-2xl text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4tracking-wide drop-shadow">
           Contact <span className="text-cyan-400">T4 Solutions</span>
@@ -17,7 +17,7 @@ export default function ContactHero() {
             className="flex items-center gap-3 text-cyan-300 font-semibold bg-[#23243e]/60 px-5 py-3 rounded-lg hover:bg-[#23243e]/90 transition shadow-lg"
           >
             <FaPhoneAlt className="text-purple-500" />
-            <span>7036311198</span>
+            <span>8897502339</span>
           </a>
           <a
             href="https://instagram.com/t4solutions"

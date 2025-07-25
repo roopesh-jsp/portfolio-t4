@@ -24,17 +24,18 @@ function Footer() {
             <h4 className="text-lg font-semibold mb-3 text-white">Explore</h4>
             <ul className="space-y-2 text-sm text-gray-400 text-center">
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <a href="/" className="hover:text-cyan-400 transition">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
-                  Projects
+                <a href="/services" className="hover:text-cyan-400 transition">
+                  services
                 </a>
               </li>
+
               <li>
-                <a href="#" className="hover:text-cyan-400 transition">
+                <a href="/contact" className="hover:text-cyan-400 transition">
                   Contact
                 </a>
               </li>

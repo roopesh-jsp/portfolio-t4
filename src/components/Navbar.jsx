@@ -10,7 +10,7 @@ function Navbar() {
   const links = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-    { name: "Projects", path: "/projects" },
+
     { name: "Contact", path: "/contact" },
   ];
 
