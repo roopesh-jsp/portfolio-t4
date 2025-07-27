@@ -4,7 +4,7 @@ export const socialLinks = [
   {
     id: 1,
     icon: <FaGithub />,
-    href: "https://github.com/satishkumar0410",
+    href: "https://github.com/roopesh-jsp",
     label: "GitHub",
   },
   {
