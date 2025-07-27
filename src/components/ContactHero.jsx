@@ -13,14 +13,14 @@ export default function ContactHero() {
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-8">
           <a
-            href="tel:7036311198"
+            href="https://wa.me/918897502339?text=Hi!%20I%E2%80%99d%20like%20to%20book%20a%20free%20call%20about%20building%20a%20website%20for%20my%20business."
             className="flex items-center gap-3 text-cyan-300 font-semibold bg-[#23243e]/60 px-5 py-3 rounded-lg hover:bg-[#23243e]/90 transition shadow-lg"
           >
             <FaPhoneAlt className="text-purple-500" />
             <span>8897502339</span>
           </a>
           <a
-            href="https://instagram.com/t4solutions"
+            href="https://www.instagram.com/t4_element?igsh=Y3k2bjhnNW1rbGMy"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-pink-300 font-semibold bg-[#20152b]/60 px-5 py-3 rounded-lg hover:bg-pink-600/80 transition shadow-lg"

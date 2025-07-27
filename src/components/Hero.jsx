@@ -91,11 +91,9 @@ function Hero() {
           <br />
         </h1>
 
-        <p className="text-gray-400 text-base md:text-lg mb-8 max-w-xl mx-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.15)]">
-          <strong>
-            Elevate your brand with modern, high-performing digital solutions —
-            built fast, beautifully, and affordably.
-          </strong>
+        <p className="text-gray-300 text-base md:text-lg mb-8 max-w-xl mx-auto drop-shadow-[0_0_10px_rgba(0,255,255,0.15)]">
+          Elevate your brand with modern, high-performing digital solutions —
+          built fast, beautifully, and affordably.
         </p>
 
         {/* 🚀 Call Button */}
