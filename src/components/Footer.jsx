@@ -1,4 +1,11 @@
 import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
+
+const links = [
+  { name: "Home", path: "/" },
+  { name: "Services", path: "/services" },
+  { name: "Contact", path: "/contact" },
+];
 
 function Footer() {
   return (
@@ -13,7 +20,7 @@ function Footer() {
         >
           {/* Column 1: Branding (left-aligned) */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-2">T4 Solutions</h3>
+            <h3 className="text-xl font-bold text-white mb-2">T4 Elements</h3>
             <p className="text-gray-400 text-sm max-w-xs">
               Turning ideas into digital excellence.
             </p>
@@ -24,20 +31,26 @@ function Footer() {
             <h4 className="text-lg font-semibold mb-3 text-white">Explore</h4>
             <ul className="space-y-2 text-sm text-gray-400 text-center">
               <li>
-                <a href="/" className="hover:text-cyan-400 transition">
+                <NavLink to="/" className="hover:text-cyan-400 transition">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="/services" className="hover:text-cyan-400 transition">
+                <NavLink
+                  to="/services"
+                  className="hover:text-cyan-400 transition"
+                >
                   services
-                </a>
+                </NavLink>
               </li>
 
               <li>
-                <a href="/contact" className="hover:text-cyan-400 transition">
+                <NavLink
+                  to="/contact"
+                  className="hover:text-cyan-400 transition"
+                >
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

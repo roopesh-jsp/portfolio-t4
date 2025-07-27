@@ -132,13 +132,13 @@ const fixedIconPositionsTallTablet = [
 
 // --- Specific Icon Positions for 375px x 667px resolution (iPhone 6/7/8 Standard Portrait) ---
 const fixedIconPositionsiPhoneStandard = [
-  { x: 187, y: 50 },  // React (Index 0) - Top-center
-  { x: 50, y: 120 },  // HTML5 (Index 1) - Top-left
+  { x: 187, y: 50 }, // React (Index 0) - Top-center
+  { x: 50, y: 120 }, // HTML5 (Index 1) - Top-left
   { x: 300, y: 120 }, // Express (Index 2) - Top-right (slightly lower)
 
-   // PostgreSQL (Index 4) - Mid-right (slightly lower)
+  // PostgreSQL (Index 4) - Mid-right (slightly lower)
 
-  { x: 50, y: 450 },  // JavaScript (Index 5) - Lower-mid-left
+  { x: 50, y: 450 }, // JavaScript (Index 5) - Lower-mid-left
   { x: 300, y: 480 }, // NodeJS (Index 6) - Lower-mid-right (slightly lower)
   { x: 187, y: 580 }, // Python (Index 7) - Bottom-center
 ];
@@ -146,16 +146,15 @@ const fixedIconPositionsiPhoneStandard = [
 // --- GENERAL MOBILE PORTRAIT (<450px width, <=932px height) ---
 // This acts as a fallback for other tall/narrow mobiles not exactly 375x667
 const fixedIconPositionsMobilePortrait = [
-  { x: 215, y: 60 },  // React (Index 0) - Top-center (based on 430/2)
-  { x: 80, y: 90 },  // HTML5 (Index 1) - Top-left
+  { x: 215, y: 60 }, // React (Index 0) - Top-center (based on 430/2)
+  { x: 80, y: 90 }, // HTML5 (Index 1) - Top-left
   { x: 350, y: 220 }, // Express (Index 2) - Top-right (slightly lower)
-  { x: 60, y: 580 },  // CSS3Alt (Index 3) - Mid-left
+  { x: 60, y: 580 }, // CSS3Alt (Index 3) - Mid-left
   { x: 370, y: 450 }, // PostgreSQL (Index 4) - Mid-right (slightly lower)
   { x: 315, y: 650 }, // JavaScript (Index 5) - Lower-mid-center
-  { x: 90, y: 680 },  // NodeJS (Index 6) - Bottom-left
+  { x: 90, y: 680 }, // NodeJS (Index 6) - Bottom-left
   { x: 5, y: 210 }, // Python (Index 7) - Bottom-right
 ];
-
 
 export default function IconGridDisplay({ contentRect = null }) {
   const [fixedIconsData, setFixedIconsData] = useState([]);
@@ -198,7 +197,10 @@ export default function IconGridDisplay({ contentRect = null }) {
         positionsArrayToUse = fixedIconPositionsDesktop;
       }
 
-      const numPositionsToUse = Math.min(totalIconCount, positionsArrayToUse.length);
+      const numPositionsToUse = Math.min(
+        totalIconCount,
+        positionsArrayToUse.length
+      );
 
       const newFixedIconsData = [];
       for (let i = 0; i < numPositionsToUse; i++) {
@@ -242,8 +244,8 @@ export default function IconGridDisplay({ contentRect = null }) {
             key={item.id}
             className={styles.iconItem}
             style={{
-              left: `${item.left}px`,
-              top: `${item.top}px`,
+              left: ` ${item.left}px`,
+              top: ` ${item.top}px`,
             }}
             initial={{
               opacity: 0,
@@ -253,11 +255,7 @@ export default function IconGridDisplay({ contentRect = null }) {
             animate={{
               opacity: 0.6,
               scale: item.scale,
-              rotate: [
-                item.rotate,
-                item.rotateFinal,
-                item.rotate,
-              ],
+              rotate: [item.rotate, item.rotateFinal, item.rotate],
             }}
             transition={{
               duration: item.duration,
@@ -269,7 +267,7 @@ export default function IconGridDisplay({ contentRect = null }) {
           >
             {/* Clone the icon element to apply responsive sizing from CSS Module */}
             {React.cloneElement(item.icon, {
-              className: `${item.icon.props.className} ${styles.iconSize}`,
+              className: ` ${item.icon.props.className} ${styles.iconSize}`,
             })}
           </motion.div>
         );

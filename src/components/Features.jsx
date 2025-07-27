@@ -13,7 +13,7 @@ function FeatureSection() {
           viewport={{ once: true }}
           className="text-4xl md:text-5xl font-bold mb-4 text-white tracking-wide"
         >
-          What We Offer at <span className="text-cyan-400">T4 Solutions</span>
+          What We Offer at <span className="text-cyan-400">T4 Elements</span>
         </motion.h2>
 
         <motion.p
