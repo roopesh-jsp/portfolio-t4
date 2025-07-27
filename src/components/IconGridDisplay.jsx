@@ -71,7 +71,7 @@ const fixedIconPositionsDesktop = [
 
   // Bottom Row (Spread out horizontally)
   { x: 200, y: 800 }, // Pos for Firebase (Index 11)
-  { x: 650, y: 900 }, // Pos for MySQL (Index 12)
+  { x: 650, y: 830 }, // Pos for MySQL (Index 12)
   { x: 1250, y: 870 }, // Pos for FastAPI (Index 13)
   { x: 1780, y: 920 }, // Pos for Langchain (Index 14)
   { x: 1550, y: 600 }, // Pos for FaDatabase (Index 15)
@@ -130,6 +130,33 @@ const fixedIconPositionsTallTablet = [
   { x: 512, y: 1300 }, // Pos for FastAPI (Index 13) - Very Bottom-Center
 ];
 
+// --- Specific Icon Positions for 375px x 667px resolution (iPhone 6/7/8 Standard Portrait) ---
+const fixedIconPositionsiPhoneStandard = [
+  { x: 187, y: 50 },  // React (Index 0) - Top-center
+  { x: 50, y: 120 },  // HTML5 (Index 1) - Top-left
+  { x: 300, y: 120 }, // Express (Index 2) - Top-right (slightly lower)
+
+   // PostgreSQL (Index 4) - Mid-right (slightly lower)
+
+  { x: 50, y: 450 },  // JavaScript (Index 5) - Lower-mid-left
+  { x: 300, y: 480 }, // NodeJS (Index 6) - Lower-mid-right (slightly lower)
+  { x: 187, y: 580 }, // Python (Index 7) - Bottom-center
+];
+
+// --- GENERAL MOBILE PORTRAIT (<450px width, <=932px height) ---
+// This acts as a fallback for other tall/narrow mobiles not exactly 375x667
+const fixedIconPositionsMobilePortrait = [
+  { x: 215, y: 60 },  // React (Index 0) - Top-center (based on 430/2)
+  { x: 80, y: 90 },  // HTML5 (Index 1) - Top-left
+  { x: 350, y: 220 }, // Express (Index 2) - Top-right (slightly lower)
+  { x: 60, y: 580 },  // CSS3Alt (Index 3) - Mid-left
+  { x: 370, y: 450 }, // PostgreSQL (Index 4) - Mid-right (slightly lower)
+  { x: 315, y: 650 }, // JavaScript (Index 5) - Lower-mid-center
+  { x: 90, y: 680 },  // NodeJS (Index 6) - Bottom-left
+  { x: 5, y: 210 }, // Python (Index 7) - Bottom-right
+];
+
+
 export default function IconGridDisplay({ contentRect = null }) {
   const [fixedIconsData, setFixedIconsData] = useState([]);
   const containerRef = useRef(null);
@@ -137,11 +164,22 @@ export default function IconGridDisplay({ contentRect = null }) {
   useEffect(() => {
     const assignFixedPositions = () => {
       const currentWidth = window.innerWidth;
+      const currentHeight = window.innerHeight; // Get the current window height
       let totalIconCount;
       let positionsArrayToUse;
 
-      if (currentWidth < 480) {
-        // Very small mobile screens
+      // New: Exact match for 375x667 resolution. This must be the FIRST condition.
+      if (currentWidth === 375 && currentHeight === 667) {
+        totalIconCount = fixedIconPositionsiPhoneStandard.length; // 8 icons
+        positionsArrayToUse = fixedIconPositionsiPhoneStandard;
+      }
+      // General Mobile Portrait (<450px width, <=932px height) - acts as fallback for other tall phones
+      else if (currentWidth < 450 && currentHeight <= 932) {
+        totalIconCount = fixedIconPositionsMobilePortrait.length; // 8 icons
+        positionsArrayToUse = fixedIconPositionsMobilePortrait;
+      }
+      // Very small widths not covered by specific tall mobile rules (e.g., very short screens, or non-portrait)
+      else if (currentWidth < 480) {
         totalIconCount = 0; // Display 0 icons
         positionsArrayToUse = [];
       } else if (currentWidth >= 480 && currentWidth < 768) {
@@ -165,13 +203,13 @@ export default function IconGridDisplay({ contentRect = null }) {
       const newFixedIconsData = [];
       for (let i = 0; i < numPositionsToUse; i++) {
         const position = positionsArrayToUse[i];
+        // Ensure we don't go out of bounds if totalIconCount is less than allAvailableIcons.length
         const iconData = allAvailableIcons[i % allAvailableIcons.length];
 
         // Determine rotation direction based on index or any other logic
-        // For demonstration, let's alternate based on index
-        const baseRotate = i % 2 === 0 ? 5 : -15; // 85 degrees right, -95 degrees left
-        const initialRotate = baseRotate + Math.random() * 20 - 10; // Add some randomness
-        const finalRotate = baseRotate + (Math.random() * 10 - 5); // Add subtle variation for end of animation
+        const baseRotate = i % 2 === 0 ? 5 : -15;
+        const initialRotate = baseRotate + Math.random() * 20 - 10;
+        const finalRotate = baseRotate + (Math.random() * 10 - 5);
 
         newFixedIconsData.push({
           id: `${iconData.icon.props.className}-${i}`,
@@ -180,8 +218,8 @@ export default function IconGridDisplay({ contentRect = null }) {
           top: position.y,
           scale: 0.8 + Math.random() * 0.4,
           duration: 5 + Math.random() * 5,
-          rotate: initialRotate, // Use the determined initial rotation
-          rotateFinal: finalRotate, // Use for the animation's end rotation
+          rotate: initialRotate,
+          rotateFinal: finalRotate,
         });
       }
 
@@ -210,15 +248,15 @@ export default function IconGridDisplay({ contentRect = null }) {
             initial={{
               opacity: 0,
               scale: item.scale * 0.8,
-              rotate: item.rotate, // Initial rotation
+              rotate: item.rotate,
             }}
             animate={{
               opacity: 0.6,
               scale: item.scale,
               rotate: [
-                item.rotate, // Start from the initial rotation
-                item.rotateFinal, // Animate to the slightly varied "final" rotation
-                item.rotate, // Return to the initial rotation
+                item.rotate,
+                item.rotateFinal,
+                item.rotate,
               ],
             }}
             transition={{
