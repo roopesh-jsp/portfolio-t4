@@ -30,13 +30,13 @@
 /* Tablet icon size */
 @media (min-width: 768px) {
   .iconItem > svg {
-    font-size: 3rem; /* Larger for tablets */
+    font-size: 4rem; /* Larger for tablets */
   }
 }
 
 /* Desktop icon size */
 @media (min-width: 1024px) {
   .iconItem > svg {
-    font-size: 4rem; /* Even larger for desktops */
+    font-size: 4.5rem; /* Even larger for desktops */
   }
 }
