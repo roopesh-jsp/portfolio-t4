@@ -48,8 +48,6 @@ const techRows = [
 function TechStackSection() {
   return (
     <section className="bg-[#0d0d0d] text-white py-24 px-6 relative min-h-[650px] sm:min-h-[550px] overflow-hidden">
-      {/* Floating background icons */}
-
       {/* Heading */}
       <div className="max-w-5xl mx-auto text-center mb-16 relative z-10">
         <motion.h2
@@ -77,11 +75,11 @@ function TechStackSection() {
       {techRows.map((row, index) => (
         <div
           key={index}
-          className="relative w-[75%] mx-auto overflow-hidden mb-12 z-10"
+          className="relative w-[90%] sm:w-[75%] mx-auto overflow-hidden mb-12 z-10"
         >
           {/* Gradient fade edges */}
-          <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-[#0d0d0d] to-transparent z-20" />
-          <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#0d0d0d] to-transparent z-20" />
+          <div className="absolute left-0 top-0 h-full w-12 sm:w-16 bg-gradient-to-r from-[#0d0d0d] to-transparent z-20" />
+          <div className="absolute right-0 top-0 h-full w-12 sm:w-16 bg-gradient-to-l from-[#0d0d0d] to-transparent z-20" />
 
           {/* Animated Row */}
           <div
@@ -89,13 +87,18 @@ function TechStackSection() {
               index % 2 === 0 ? "animate-slide-left" : "animate-slide-right"
             } gap-[3vw] sm:gap-3 md:gap-4 lg:gap-6`}
           >
+            {/* Repeat for loop for infinite scrolling effect */}
             {[...row, ...row].map((tech, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center justify-center w-24 sm:w-28 shrink-0"
+                className="flex flex-col items-center justify-center w-16 sm:w-20 md:w-24 shrink-0"
               >
-                <div className="text-4xl">{tech.icon}</div>
-                <p className="text-sm mt-2 text-gray-400">{tech.name}</p>
+                <div className="text-2xl sm:text-3xl md:text-4xl">
+                  {tech.icon}
+                </div>
+                <p className="text-xs sm:text-sm mt-2 text-gray-400">
+                  {tech.name}
+                </p>
               </div>
             ))}
           </div>
