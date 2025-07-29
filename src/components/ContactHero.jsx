@@ -13,6 +13,7 @@ export default function ContactHero() {
         </p>
         <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-8">
           <a
+            target="_blank"
             href="https://wa.me/918897502339?text=Hi!%20I%E2%80%99d%20like%20to%20book%20a%20free%20call%20about%20building%20a%20website%20for%20my%20business."
             className="flex items-center gap-3 text-cyan-300 font-semibold bg-[#23243e]/60 px-5 py-3 rounded-lg hover:bg-[#23243e]/90 transition shadow-lg"
           >

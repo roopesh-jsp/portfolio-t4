@@ -17,7 +17,7 @@ export const socialLinks = [
   {
     id: 3,
     icon: <FaLinkedin />,
-    href: "#",
+    href: "https://www.linkedin.com/in/rupesh13/",
     label: "LinkedIn",
   },
 ];

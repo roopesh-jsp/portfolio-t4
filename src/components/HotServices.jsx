@@ -29,6 +29,7 @@ function HotServices() {
             <p className="text-gray-400 text-sm mb-6">{service.description}</p>
             <a
               href={service.href}
+              target="_blank"
               className="inline-block mt-2 px-5 py-2.5 bg-cyan-400 text-black text-sm rounded-full font-semibold hover:bg-cyan-300 transition duration-300"
             >
               {service.cta}

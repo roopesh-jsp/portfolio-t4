@@ -66,7 +66,7 @@ export default function DevelopersCarousel() {
   const handleViewAll = () => setShowAllSkills((prev) => !prev);
 
   return (
-    <section className="w-full flex flex-col items-center py-12 bg-[#0d0d0d] relative">
+    <section className="w-full flex flex-col items-center py-12 bg-[#0d0d0d] relative overflow-hidden">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">
         <span className="text-white">Our </span>
         <span className="bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent">
