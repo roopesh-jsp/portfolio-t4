@@ -40,7 +40,7 @@ function Footer() {
                   to="/services"
                   className="hover:text-cyan-400 transition"
                 >
-                  services
+                  Services
                 </NavLink>
               </li>
 

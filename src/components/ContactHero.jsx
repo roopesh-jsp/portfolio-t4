@@ -5,7 +5,7 @@ export default function ContactHero() {
     <section className="w-full bg-[#0d0d0d] text-white px-6 py-20 flex flex-col items-center">
       <div className="max-w-2xl text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4tracking-wide drop-shadow">
-          Contact <span className="text-cyan-400">T4 Solutions</span>
+          Contact <span className="text-cyan-400">T4 Elements</span>
         </h1>
         <p className="mb-6 text-md text-gray-200">
           Feel free to call us or enquire about your project needs — we’re
@@ -27,7 +27,7 @@ export default function ContactHero() {
             className="flex items-center gap-3 text-pink-300 font-semibold bg-[#20152b]/60 px-5 py-3 rounded-lg hover:bg-pink-600/80 transition shadow-lg"
           >
             <FaInstagram className="text-pink-400" />
-            <span>@t4solutions</span>
+            <span>@t4Elements</span>
           </a>
         </div>
       </div>
