@@ -70,7 +70,7 @@ export default function DevelopersCarousel() {
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-10">
         <span className="text-white">Our </span>
         <span className="bg-gradient-to-r from-cyan-400 to-cyan-200 bg-clip-text text-transparent">
-          developers.
+          Developers.
         </span>
       </h1>
 

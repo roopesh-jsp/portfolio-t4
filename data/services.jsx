@@ -44,17 +44,5 @@ export const services = [
 ];
 
 export const hotServices = [
-  {
-    id: 1,
-    label: "🔥 Hot Service",
-    title: "Personal Portfolio Websites for Students",
-    description:
-      "Launch your digital presence without breaking the bank. We craft stunning, responsive portfolios for students at minimal cost — fully customizable with real-time feedback integration.",
-    cta: "Get Yours Now",
-    href: "https://wa.me/918897502339?text=Hi!%20I%E2%80%99d%20like%20to%20book%20a%20free%20call%20about%20building%20a%20website%20for%20my%20business.", // or route or modal trigger
-    badgeColor: "bg-cyan-900/20 text-cyan-400",
-    glowColor: "shadow-[0_0_30px_rgba(0,255,255,0.1)]",
-  },
-
   // You can add more items here in future...
 ];

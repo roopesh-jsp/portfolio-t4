@@ -5,6 +5,8 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import ServicesPg from "./pages/ServicesPg";
+import About from "./pages/About";
+import Team from "./pages/Team";
 
 
 const router = createBrowserRouter([
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <ServicesPg />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/team",
+        element: <Team />,
       },
       {
         path: "*",

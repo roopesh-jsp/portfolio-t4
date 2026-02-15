@@ -20,7 +20,7 @@ function Footer() {
         >
           {/* Column 1: Branding (left-aligned) */}
           <div>
-            <h3 className="text-xl font-bold text-white mb-2">T4 Elements</h3>
+            <h3 className="text-xl font-bold mb-2" style={{ fontFamily: 'Arbotek, sans-serif', color: '#730909' }}>REGNUM</h3>
             <p className="text-gray-400 text-sm max-w-xs">
               Turning ideas into digital excellence.
             </p>
@@ -74,7 +74,7 @@ function Footer() {
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.4 }}
         >
-          &copy; {new Date().getFullYear()} T4 Solutions. All rights reserved.
+          &copy; {new Date().getFullYear()} <span style={{ fontFamily: 'Arbotek, sans-serif', color: '#730909' }}>REGNUM</span>. All rights reserved.
         </motion.div>
       </div>
     </footer>

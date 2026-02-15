@@ -5,7 +5,7 @@ export default function ContactHero() {
     <section className="w-full bg-[#0d0d0d] text-white px-6 py-20 flex flex-col items-center">
       <div className="max-w-2xl text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4tracking-wide drop-shadow">
-          Contact <span className="text-cyan-400">T4 Elements</span>
+          Contact <span style={{ fontFamily: 'Arbotek, sans-serif', color: '#730909' }}>REGNUM</span>
         </h1>
         <p className="mb-6 text-md text-gray-200">
           Feel free to call us or enquire about your project needs — we’re
@@ -14,11 +14,19 @@ export default function ContactHero() {
         <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-8">
           <a
             target="_blank"
-            href="https://wa.me/918897502339?text=Hi!%20I%E2%80%99d%20like%20to%20book%20a%20free%20call%20about%20building%20a%20website%20for%20my%20business."
+            href="https://wa.me/919848717222?text=Hi!%20I%E2%80%99d%20like%20to%20book%20a%20free%20call%20about%20building%20a%20website%20for%20my%20business."
             className="flex items-center gap-3 text-cyan-300 font-semibold bg-[#23243e]/60 px-5 py-3 rounded-lg hover:bg-[#23243e]/90 transition shadow-lg"
           >
             <FaPhoneAlt className="text-purple-500" />
-            <span>8897502339</span>
+            <span>9848717222</span>
+          </a>
+          <a
+            target="_blank"
+            href="https://wa.me/916281416021?text=Hi!%20I%E2%80%99d%20like%20to%20book%20a%20free%20call%20about%20building%20a%20website%20for%20my%20business."
+            className="flex items-center gap-3 text-cyan-300 font-semibold bg-[#23243e]/60 px-5 py-3 rounded-lg hover:bg-[#23243e]/90 transition shadow-lg"
+          >
+            <FaPhoneAlt className="text-purple-500" />
+            <span>6281416021</span>
           </a>
           <a
             href="https://www.instagram.com/t4_element?igsh=Y3k2bjhnNW1rbGMy"

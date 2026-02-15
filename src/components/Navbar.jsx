@@ -10,7 +10,8 @@ function Navbar() {
   const links = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
-
+    { name: "About", path: "/about" },
+    { name: "Our Team", path: "/team" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -20,9 +21,9 @@ function Navbar() {
         {/* Logo */}
         <NavLink to="/">
           <motion.img
-            src="t4.png"
+            src="regnum_logo.png"
             alt="logo"
-            className="h-10 w-10 object-cover cursor-pointer rounded-full border border-white/20 shadow-inner"
+            className="h-10 object-contain cursor-pointer"
             initial={{ x: -100, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5 }}

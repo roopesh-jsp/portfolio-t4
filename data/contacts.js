@@ -31,6 +31,34 @@ export const developers = [
     ],
   },
   {
+    name: "Niranjan Galla",
+    role: "Full Stack Developer",
+    roleIcon: FaLaptopCode,
+    bio: "Detail-oriented developer skilled in building scalable web applications, AI-powered systems, and real-time platforms. Strong foundation in backend architecture, frontend design, and machine learning pipelines. Passionate about writing efficient, clean, and production-ready code.",
+    skills: [
+      "React",
+      "Spring Boot",
+      "Python",
+      "DL",
+      "MongoDB",
+      "Firebase",
+      "AI/ML",
+
+    ],
+    links: [
+      {
+        name: "GitHub",
+        url: "https://github.com/zeusXtruealpha/",
+        icon: FaGithub,
+      },
+      {
+        name: "LinkedIn",
+        url: "https://www.linkedin.com/in/niranjan-galla-6a3067298/",
+        icon: FaLinkedin,
+      },
+    ],
+  },
+  {
     name: "Prithvi Perivela",
     role: "Backend Developer",
     roleIcon: FaLaptopCode,
@@ -114,4 +142,5 @@ export const developers = [
       },
     ],
   },
+  
 ];

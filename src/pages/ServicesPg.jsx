@@ -31,7 +31,7 @@ function ServicesPg() {
             Our <span className="text-cyan-400">Core Services</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Explore how T4 Solutions brings your ideas to life — with tailored
+            Explore how <span style={{ fontFamily: 'Arbotek, sans-serif', color: '#730909' }}>REGNUM</span> brings your ideas to life — with tailored
             digital experiences.
           </p>
         </div>

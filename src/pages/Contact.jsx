@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import DevelopersCarousel from "../components/Developers";
+import { useEffect } from "react";
 import ContactHero from "../components/ContactHero";
 
 function Contact() {
@@ -9,7 +8,6 @@ function Contact() {
   return (
     <div>
       <ContactHero />
-      <DevelopersCarousel />
     </div>
   );
 }
